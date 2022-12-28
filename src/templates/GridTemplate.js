@@ -3,30 +3,28 @@ import styled from 'styled-components';
 import Card from '../components/Card/Card.js';
 
 const StyledWrapper = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
-  width: 100%;
   margin: 0;
   padding: 0;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   align-content: center;
-  
 `;
 const StyledGridWrapper = styled.div`
   display: grid;
   grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr;
-  grid-gap: 50px;
+  grid-gap: 40px;
 `;
 const StyledWrapperH1 = styled.div`
   display: flex;
   justify-content: center;
-  width: 100%;
   position: relative;
   color: #333;
-  margin: 50px;
-  font-size: 22px;
+  margin: 10px;
+  font-size: 18px;
 `;
 const GridTemplate = () => (
   <StyledWrapper>
@@ -34,15 +32,14 @@ const GridTemplate = () => (
       <h1>Systemy FRSE</h1>
     </StyledWrapperH1>
     <StyledGridWrapper>
-      <Card>test</Card>
-      <Card>test</Card>
-      <Card>test</Card>
-      <Card>test</Card>
-      <Card>test</Card>
-      <Card>test</Card>
-      <Card>test</Card>
-      <Card>test</Card>
-
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
     </StyledGridWrapper>
   </StyledWrapper>
 );

@@ -13,13 +13,13 @@ const StyledButton = styled.button`
   color: #3B3B3B;
   cursor: pointer;
   display: inline-block;
-  font-size: 16px;
+  font-size: 14px;
   line-height: normal;
-  margin-top: 20px;
-  min-height: 60px;
+  margin-top: 10px;
+  min-height: 25px;
   min-width: 0;
   outline: none;
-  padding: 6px 24px;
+  padding: 10px 14px;
   text-align: center;
   text-decoration: none;
   transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);

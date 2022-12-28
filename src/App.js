@@ -1,11 +1,6 @@
 import React from 'react';
 import Root from './views/Root.js';
 
-const App = () => (
-  <>
-    <Root/>
-    <p>dfg</p>
-  </>
-);
+const App = () => <Root />;
 
 export default App;

@@ -12,10 +12,10 @@ class Card extends React.Component {
       text-align: center;
       position: relative;
       background: #333;
-      width: 400px;
-      height: 250px;
+      width: 300px;
+      height: 150px;
       border-radius: 6px;
-      padding: 2rem;
+      padding: 1rem;
       color: #aaa;
       -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
       -moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);

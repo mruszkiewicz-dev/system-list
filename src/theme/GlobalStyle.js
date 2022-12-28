@@ -14,7 +14,7 @@ html {
    font-size:62.5%;
 }
 body {
-   font-size:1.6rem;
+   font-size:1rem;
    font-family: Montserrat, sans-serif;
    color: #aaa;
    background-color:  #f2f2f2;
