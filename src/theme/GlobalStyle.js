@@ -16,8 +16,8 @@ html {
 body {
    font-size:1rem;
    font-family: Montserrat, sans-serif;
-   color: #aaa;
-   background-color:  #f2f2f2;
+   background-color:  #DBE3E9;
+   margin: 0;
    
    ${({ black }) =>
      black &&
@@ -26,7 +26,16 @@ body {
        color:white;
      `}  
 }
-
+@keyframes appear {
+  0% {
+    opacity: 0;
+    top: 35px;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
 `;
 
 export default GlobalStyle;

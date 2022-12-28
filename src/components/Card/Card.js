@@ -11,12 +11,12 @@ class Card extends React.Component {
     const StyledWrapper = styled.div`
       text-align: center;
       position: relative;
-      background: #333;
-      width: 300px;
-      height: 150px;
+      background: #054371;
+      width: 350px;
+      height: 180px;
       border-radius: 6px;
       padding: 1rem;
-      color: #aaa;
+      color: #DBE3E9;
       -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
       -moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
       box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
