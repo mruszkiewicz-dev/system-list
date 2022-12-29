@@ -2,6 +2,30 @@ import React from 'react';
 import styled from 'styled-components';
 import Card from '../components/Card/Card.js';
 import Arow from '../components/Arow/Arow.js';
+/* import Input from '../components/Input/Input.js';
+ */
+const systemItem = [
+  {
+    id: 1,
+    title: 'System1',
+    description: 'Lorem impsum Lorem impsum Lorem impsum',
+  },
+  {
+    id: 2,
+    title: 'System2',
+    description: 'Lorem impsum Lorem impsum Lorem impsum',
+  },
+  {
+    id: 3,
+    title: 'System3',
+    description: 'Lorem impsum Lorem impsum Lorem impsum',
+  },
+  {
+    id: 4,
+    title: 'System4',
+    description: 'Lorem impsum Lorem impsum Lorem impsum',
+  },
+];
 
 const StyledWrapper = styled.div`
   position: relative;
@@ -31,7 +55,7 @@ const StyledWrapperH1 = styled.div`
   justify-content: center;
   position: relative;
   color: #333;
-  margin: 20px;
+  margin: 30px;
   font-size: 18px;
 `;
 
@@ -55,6 +79,7 @@ const H5 = styled.h5`
 class GridTemplate extends React.Component {
   state = {
     showMore: false,
+    system: [...systemItem],
   };
 
   openMore = () => {
@@ -65,14 +90,17 @@ class GridTemplate extends React.Component {
 
   render() {
     const { showMore } = this.state;
+    const { system } = this.state;
     return (
       <StyledWrapper>
         <StyledWrapperH1>
           <h1>Systemy FRSE</h1>
         </StyledWrapperH1>
-        <StyledGridWrapper>
-          <Card />
-          <Card />
+{/*         <Input placeholder="Wyszukaj system" />
+ */}        <StyledGridWrapper>
+          {system.filter(item => item.id <= 2).map((itemFilter) => (
+            <Card key={itemFilter.id} {...itemFilter} />
+          ))}
         </StyledGridWrapper>
         {showMore === false && (
           <StyledArowWrapper onClick={() => this.openMore()}>
@@ -82,11 +110,9 @@ class GridTemplate extends React.Component {
         )}
         {showMore === true && (
           <StyledGridWrapper>
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+            {system.filter(item => item.id > 2).map((itemFilter) => (
+            <Card key={itemFilter.id} {...itemFilter} />
+          ))}
           </StyledGridWrapper>
         )}
       </StyledWrapper>

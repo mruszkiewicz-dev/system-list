@@ -3,7 +3,7 @@ import GlobalStyle from '../theme/GlobalStyle.js';
 
 
 const MainTemplate = () => (
-    <GlobalStyle  />
+    <GlobalStyle   />
 );
 
 export default MainTemplate;

@@ -19,8 +19,8 @@ body {
    background-color:  #DBE3E9;
    margin: 0;
    
-   ${({ black }) =>
-     black &&
+   ${({ dark }) =>
+    dark &&
      css`
        background-color: black;
        color:white;
