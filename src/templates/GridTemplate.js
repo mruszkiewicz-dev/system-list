@@ -108,7 +108,7 @@ const H5 = styled.h5`
 `;
 
 const StyleFAQ = styled.div`
-  font-size: 20px;
+  font-size: 18px;
   text-decoration: none;
   & a{
     text-decoration: none;
