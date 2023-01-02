@@ -20,11 +20,15 @@ const StyledWrapper = styled.div`
     transition: 0.3s ease-out;
   }
 `;
+const StyledP = styled.p`
+font-size: 14px;
+` 
+
 
 const Card = ({ title, description, link }) => (
   <StyledWrapper>
     <h1>{title}</h1>
-    <p>{description}</p>
+    <StyledP>{description}</StyledP>
     <Button link={link} />
   </StyledWrapper>
 );
