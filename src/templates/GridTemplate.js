@@ -20,7 +20,7 @@ const systemItem = [
   },
   {
     id: 3,
-    title: 'Symfoniahr',
+    title: 'HRcloud',
     description: 'System kadrowy, szkolenia, wnioski urlopowe',
     link:'https://frse.symfoniahr.pl'
   },
