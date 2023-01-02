@@ -15,7 +15,7 @@ const systemItem = [
   {
     id: 2,
     title: 'System Rejestracji Czasu Pracy',
-    description: 'Rozliczanie godzin',
+    description: 'Rozliczanie godzin pracy',
     link: 'https://czaspracy.frse.org.pl/login'
   },
   {
@@ -51,7 +51,7 @@ const systemItem = [
   {
     id: 8,
     title: 'Mantis',
-    description: 'System zgłoszeń dot Finery, Forms oraz Narzedzi Komisyjnych',
+    description: 'System zgłoszeń dot. Finery, Forms oraz Narzędzi Komisyjnych',
     link:'http://mantis.frse.org.pl'
   },
 ];
