@@ -21,12 +21,11 @@ const StyledWrapper = styled.div`
   }
 `;
 
-const Card = ({ title, description }) => (
+const Card = ({ title, description, link }) => (
   <StyledWrapper>
     <h1>{title}</h1>
     <p>{description}</p>
-    <Button />
+    <Button link={link} />
   </StyledWrapper>
 );
-
 export default Card;
