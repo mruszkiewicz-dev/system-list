@@ -10,49 +10,49 @@ const systemItem = [
     id: 1,
     title: 'EZD',
     description: 'Elektroniczne zarządzanie dokumentami',
-    link: 'https://ezd.frse.org.pl/login'
+    link: 'https://ezd.frse.org.pl/login',
   },
   {
     id: 2,
     title: 'System Rejestracji Czasu Pracy',
     description: 'Rozliczanie godzin pracy',
-    link: 'https://czaspracy.frse.org.pl/login'
+    link: 'https://czaspracy.frse.org.pl/login',
   },
   {
     id: 3,
     title: 'HRcloud',
     description: 'System kadrowy, szkolenia, wnioski urlopowe',
-    link:'https://frse.symfoniahr.pl'
+    link: 'https://frse.symfoniahr.pl',
   },
   {
     id: 4,
     title: 'Magazyn',
     description: 'Zgłoszenia IT, wnioski o sprzęt',
-    link:'http://magazyn.frse.org.pl'
+    link: 'http://magazyn.frse.org.pl',
   },
   {
     id: 5,
     title: 'E-wnioski',
     description: 'Nadawanie i odbieranie uprawnień do systemów',
-    link:'https://e-wnioski.frse.org.pl'
+    link: 'https://e-wnioski.frse.org.pl',
   },
   {
     id: 6,
     title: 'Intranet',
     description: 'Intranet FRSE',
-    link:'https://intranet.frse.org.pl/'
+    link: 'https://intranet.frse.org.pl/',
   },
   {
     id: 7,
     title: 'Finera',
     description: 'System dokumentów OnLine',
-    link:'https://finera.frse.org.pl/'
+    link: 'https://finera.frse.org.pl/',
   },
   {
     id: 8,
     title: 'Mantis',
     description: 'System zgłoszeń dot. Finery, Forms oraz Narzędzi Komisyjnych',
-    link:'http://mantis.frse.org.pl'
+    link: 'http://mantis.frse.org.pl',
   },
 ];
 
@@ -96,7 +96,7 @@ const StyledArowWrapper = styled.div`
   align-items: center;
   align-content: center;
   margin-top: 8%;
-  margin-bottom:20px;
+  margin-bottom: 20px;
   font-size: 18px;
   padding: 0;
 `;
@@ -106,6 +106,33 @@ const H5 = styled.h5`
   position: relative;
   margin: 0;
 `;
+
+const StyleFAQ = styled.div`
+  font-size: 20px;
+  text-decoration: none;
+  & a{
+    text-decoration: none;
+    color: black;
+    background-color: #054371;
+  color: white;
+  border-radius: 6px;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  &:hover {
+    transform: scale(1.1);
+    transition: 0.3s ease-out;
+  }
+
+  } 
+`
 class GridTemplate extends React.Component {
   state = {
     showMore: false,
@@ -123,14 +150,22 @@ class GridTemplate extends React.Component {
     const { system } = this.state;
     return (
       <StyledWrapper>
+        <StyleFAQ>
+          <a href="https://intranet.frse.org.pl/faqs/" target="_blank" rel="noreferrer">
+            FAQ
+          </a>
+        </StyleFAQ>
         <StyledWrapperH1>
           <h1>Systemy FRSE</h1>
         </StyledWrapperH1>
-{/*         <Input placeholder="Wyszukaj system" />
- */}        <StyledGridWrapper>
-          {system.filter(item => item.id <= 2).map((itemFilter) => (
-            <Card key={itemFilter.id} {...itemFilter} />
-          ))}
+        {/*         <Input placeholder="Wyszukaj system" />
+         */}{' '}
+        <StyledGridWrapper>
+          {system
+            .filter((item) => item.id <= 2)
+            .map((itemFilter) => (
+              <Card key={itemFilter.id} {...itemFilter} />
+            ))}
         </StyledGridWrapper>
         {showMore === false && (
           <StyledArowWrapper onClick={() => this.openMore()}>
@@ -140,9 +175,11 @@ class GridTemplate extends React.Component {
         )}
         {showMore === true && (
           <StyledGridWrapper>
-            {system.filter(item => item.id > 2).map((itemFilter) => (
-            <Card key={itemFilter.id} {...itemFilter} />
-          ))}
+            {system
+              .filter((item) => item.id > 2)
+              .map((itemFilter) => (
+                <Card key={itemFilter.id} {...itemFilter} />
+              ))}
           </StyledGridWrapper>
         )}
       </StyledWrapper>
