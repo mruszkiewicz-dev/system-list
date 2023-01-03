@@ -16,7 +16,7 @@ const systemItem = [
     id: 2,
     title: 'System Rejestracji Czasu Pracy',
     description: 'Rozliczanie godzin pracy',
-    link: 'https://czaspracy.frse.org.pl/login',
+    link: 'https://kcp.frse.org.pl',
   },
   {
     id: 3,
