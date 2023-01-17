@@ -44,7 +44,7 @@ export const systemItem = [
    {
      id: 8,
      title: 'Mantis',
-     description: 'System zgłoszeń dot. Finery, Forms oraz Narzędzi Komisyjnych',
+     description: 'System zgłoszeń dot. Finery, Forms oraz Narzędzi Komisyjnych ',
      link: 'http://mantis.frse.org.pl',
    },
  ];
