@@ -38,13 +38,13 @@ export const systemItem = [
    {
      id: 7,
      title: 'Finera',
-     description: 'System dokumentów OnLine',
+     description: 'System dokumentów OnLine ',
      link: 'https://finera.frse.org.pl/',
    },
    {
      id: 8,
      title: 'Mantis',
-     description: 'System zgłoszeń dot. Finery, Forms oraz Narzędzi Komisyjnych ',
+     description: 'System zgłoszeń dot. Finery, Forms oraz Narzędzi Komisyjnych',
      link: 'http://mantis.frse.org.pl',
    },
  ];
