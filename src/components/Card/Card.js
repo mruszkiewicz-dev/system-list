@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import Button from '../Button/Button.js';
 
 const StyledWrapper = styled.div`
@@ -19,15 +19,20 @@ const StyledWrapper = styled.div`
     transform: scale(1.1);
     transition: 0.3s ease-out;
   }
+  ${({ showMore }) =>
+    showMore &&
+    css`
+      transform: scale(0.94);
+    `}
 `;
 const StyledP = styled.p`
-font-size: 14px;
-` 
+  font-size: 14px;
+`;
 
-
-const Card = ({ title, description, link }) => (
-  <StyledWrapper>
+const Card = ({ title, description, link, showMore }) => (
+  <StyledWrapper showMore={showMore}>
     <h1>{title}</h1>
+    {console.log(showMore)}
     <StyledP>{description}</StyledP>
     <Button link={link} />
   </StyledWrapper>

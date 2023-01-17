@@ -47,4 +47,10 @@ export const systemItem = [
      description: 'System zgłoszeń dot. Finery, Forms oraz Narzędzi Komisyjnych',
      link: 'http://mantis.frse.org.pl',
    },
+   {
+      id: 9,
+      title: 'Baza',
+      description: 'Uchwały, resjestry, plan budżetu...',
+      link: 'http://baza.frse.org.pl/',
+    },
  ];

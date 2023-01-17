@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { systemItem } from '../data/index.js';
 import Card from '../components/Card/Card.js';
 import Arow from '../components/Arow/Arow.js';
@@ -8,6 +8,7 @@ const StyledWrapper = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
+  
   margin: 0;
   padding: 0;
   flex-wrap: wrap;
@@ -26,6 +27,15 @@ const StyledGridWrapper = styled.div`
   animation-name: appear;
   animation-duration: 1s;
   animation-iteration-count: ease;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  ${({ showMore }) =>
+    showMore &&
+    css`
+      grid-template-columns: repeat(4, 1fr);
+    `}
 `;
 const StyledWrapperH1 = styled.div`
   display: flex;
@@ -37,6 +47,7 @@ const StyledWrapperH1 = styled.div`
 `;
 
 const StyledArowWrapper = styled.div`
+position: absolute;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -105,30 +116,28 @@ class GridTemplate extends React.Component {
         <StyledWrapperH1>
           <h1>Systemy FRSE</h1>
         </StyledWrapperH1>
-        {/*         <Input placeholder="Wyszukaj system" />
-         */}{' '}
-        <StyledGridWrapper>
+        <StyledGridWrapper showMore={showMore}>
           {system
             .filter((item) => item.id <= 2)
             .map((itemFilter) => (
-              <Card key={itemFilter.id} {...itemFilter} />
+              <Card showMore={showMore} key={itemFilter.id} {...itemFilter} />
             ))}
+          {showMore === false && (
+            <StyledArowWrapper onClick={() => this.openMore()}>
+              <H5>Pokaż Wiecej Systemów</H5>
+              <Arow />
+            </StyledArowWrapper>
+          )}
+          {showMore === true && (
+            <>
+              {system
+                .filter((item) => item.id > 2)
+                .map((itemFilter) => (
+                  <Card showMore={showMore} key={itemFilter.id} {...itemFilter} />
+                ))}
+            </>
+          )}
         </StyledGridWrapper>
-        {showMore === false && (
-          <StyledArowWrapper onClick={() => this.openMore()}>
-            <H5>Pokaż Wiecej Systemów</H5>
-            <Arow />
-          </StyledArowWrapper>
-        )}
-        {showMore === true && (
-          <StyledGridWrapper>
-            {system
-              .filter((item) => item.id > 2)
-              .map((itemFilter) => (
-                <Card key={itemFilter.id} {...itemFilter} />
-              ))}
-          </StyledGridWrapper>
-        )}
       </StyledWrapper>
     );
   }
