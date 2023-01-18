@@ -53,4 +53,10 @@ export const systemItem = [
       description: 'Uchwały, resjestry, plan budżetu...',
       link: 'http://baza.frse.org.pl/',
     },
+    {
+      id: 10,
+      title: 'Sklep',
+      description: 'Wewnętrzny system zamówień artykułów spożywczych i biurowych FRSE ',
+      link: 'http://sklep.frse.org.pl/biurowe/',
+    },
  ];

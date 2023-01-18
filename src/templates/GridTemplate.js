@@ -32,33 +32,49 @@ const StyledGridWrapper = styled.div`
   align-content: center;
   text-align: center;
   align-items: start;
-
   ${({ showMore }) =>
     showMore &&
     css`
-      grid-template-columns: repeat(4, 24fr);
       margin: 15px;
       grid-gap: 20px;
-      display: flex;
+      animation: myAnim 1s ease 0s 1 normal forwards;
+      @keyframes myAnim {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    `}
+`;
+const StyledGridWrapperMore = styled.div`
+  ${({ showMore }) =>
+    showMore &&
+    css`
+      margin: 15px;
+      grid-gap: 20px;
+      display: grid;
+  grid-template-columns:  0.25fr 0.25fr 0.25fr 0.25fr ;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
       align-content: center;
-      animation: myAnim 1s ease 0s 1 normal forwards;
+      animation: myAnim2 0.8s ease 0s 1 normal forwards;
 
-      @keyframes myAnim {
-        0% {
-          opacity: 0;
-        }
-        50% {
-          opacity: 1;
-        }
+      @keyframes myAnim2 {
+      	0% {
+		transform: scale(0.8);
+    opacity: 0;
 
-        100% {
-          transform: scale(1);
-        }
-      }
+	}
+
+	100% {
+		transform: scale(1);
+    opacity: 1;
+
+	}
     `}
 `;
 const StyledWrapperH1 = styled.div`
@@ -92,15 +108,16 @@ const H5 = styled.h5`
 const StyleFAQ = styled.div`
   font-size: 18px;
   text-decoration: none;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  z-index: 99;
   & a {
     text-decoration: none;
     color: black;
     background-color: #054371;
     color: white;
     border-radius: 6px;
-    position: absolute;
-    right: 30px;
-    top: 30px;
     padding: 14px 25px;
     text-align: center;
     text-decoration: none;
@@ -145,6 +162,8 @@ class GridTemplate extends React.Component {
             .map((itemFilter) => (
               <Card showMore={showMore} key={itemFilter.id} {...itemFilter} />
             ))}
+        </StyledGridWrapper>
+        <StyledGridWrapperMore showMore={showMore}>
           {showMore === true && (
             <>
               {system
@@ -154,7 +173,7 @@ class GridTemplate extends React.Component {
                 ))}
             </>
           )}
-        </StyledGridWrapper>
+        </StyledGridWrapperMore>
         {showMore === false && (
           <StyledArowWrapper onClick={() => this.openMore()}>
             <H5>Pokaż Wiecej Systemów</H5>

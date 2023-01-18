@@ -13,7 +13,11 @@ const StyledButton = styled.a`
   font-size: 16px;
   font-weight: bold;
   line-height: normal;
-  margin-top: 20px;
+  position: absolute;
+  clear: both;
+  bottom: 15px;
+  right: 50%;
+  transform: translate(50%, -50%);
   min-height: 25px;
   min-width: 0;
   outline: none;
@@ -38,12 +42,10 @@ const StyledButton = styled.a`
     color: #fff;
     background-color: #bd9d4b;
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-    transform: translateY(-2px);
   }
 
   &:active {
     box-shadow: none;
-    transform: translateY(0);
   }
 `;
 const Button = ({ link }) => (
