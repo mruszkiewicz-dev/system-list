@@ -22,7 +22,9 @@ const StyledWrapper = styled.div`
   ${({ showMore }) =>
     showMore &&
     css`
-      transform: scale(0.94);
+      transform: scale(0.9);
+    
+
     `}
 `;
 const StyledP = styled.p`
