@@ -23,18 +23,16 @@ const StyledWrapper = styled.div`
     showMore &&
     css`
       transform: scale(0.9);
-    
-
     `}
 `;
 const StyledP = styled.p`
   font-size: 14px;
+  font-weight: 200;
 `;
 
 const Card = ({ title, description, link, showMore }) => (
   <StyledWrapper showMore={showMore}>
     <h1>{title}</h1>
-    {console.log(showMore)}
     <StyledP>{description}</StyledP>
     <Button link={link} />
   </StyledWrapper>

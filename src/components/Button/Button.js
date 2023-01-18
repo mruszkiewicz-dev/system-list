@@ -10,7 +10,7 @@ const StyledButton = styled.a`
   color: #3b3b3b;
   cursor: pointer;
   display: inline-block;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
   line-height: normal;
   margin-top: 20px;
@@ -27,7 +27,7 @@ const StyledButton = styled.a`
   width: 70%;
   will-change: transform;
   color: white;
-  background-color: #cdaa51;
+  background-color: #bd9d4b;
 
   &:disabled {
     pointer-events: none;
@@ -35,7 +35,7 @@ const StyledButton = styled.a`
 
   &:hover {
     color: #fff;
-    background-color: #cdaa51;
+    background-color: #bd9d4b;
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
     transform: translateY(-2px);
   }
