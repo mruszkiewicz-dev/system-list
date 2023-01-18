@@ -30,6 +30,7 @@ const StyledButton = styled.a`
   background-color: #bd9d4b;
 
   &:disabled {
+    
     pointer-events: none;
   }
 
