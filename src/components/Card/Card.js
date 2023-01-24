@@ -26,8 +26,7 @@ const StyledWrapper = styled.div`
     `}
 `;
 const StyledP = styled.p`
-  font-size: 14px;
-  font-weight: 200;
+  font-size: 16px;
 `;
 
 const Card = ({ title, description, link, showMore }) => (

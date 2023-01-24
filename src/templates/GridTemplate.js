@@ -113,6 +113,7 @@ const StyleFAQ = styled.div`
   transition: 0.3s ease-in-out;
   & a {
     font-size: 18px;
+
     text-decoration: none;
     color: black;
     background-color: #054371;
