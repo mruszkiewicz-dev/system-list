@@ -8,7 +8,6 @@ const StyledWrapper = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-
   margin: 0;
   padding: 0;
   flex-wrap: wrap;
@@ -55,7 +54,7 @@ const StyledGridWrapperMore = styled.div`
       margin: 15px;
       grid-gap: 20px;
       display: grid;
-  grid-template-columns:  0.25fr 0.25fr 0.25fr 0.25fr ;
+      grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
@@ -64,17 +63,16 @@ const StyledGridWrapperMore = styled.div`
       animation: myAnim2 0.8s ease 0s 1 normal forwards;
 
       @keyframes myAnim2 {
-      	0% {
-		transform: scale(0.8);
-    opacity: 0;
+        0% {
+          transform: scale(0.8);
+          opacity: 0;
+        }
 
-	}
-
-	100% {
-		transform: scale(1);
-    opacity: 1;
-
-	}
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
     `}
 `;
 const StyledWrapperH1 = styled.div`
@@ -112,7 +110,9 @@ const StyleFAQ = styled.div`
   right: 30px;
   top: 30px;
   z-index: 99;
+  transition: 0.3s ease-in-out;
   & a {
+    font-size: 18px;
     text-decoration: none;
     color: black;
     background-color: #054371;
@@ -125,10 +125,10 @@ const StyleFAQ = styled.div`
     -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
     -moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
     box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
-    &:hover {
-      transform: scale(1.1);
-      transition: 0.3s ease-out;
-    }
+  }
+  &:hover {
+
+    transform: scale(1.3);
   }
 `;
 class GridTemplate extends React.Component {

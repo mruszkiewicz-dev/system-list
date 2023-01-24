@@ -15,9 +15,9 @@ const StyledWrapper = styled.div`
   -moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
   box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
   overflow: hidden;
+  transition: 0.4s ease-in-out  ;
   &:hover {
     transform: scale(1.1);
-    transition: 0.3s ease-out;
   }
   ${({ showMore }) =>
     showMore &&
