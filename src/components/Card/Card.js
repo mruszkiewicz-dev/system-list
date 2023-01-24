@@ -22,11 +22,12 @@ const StyledWrapper = styled.div`
   ${({ showMore }) =>
     showMore &&
     css`
-      transform: scale(0.9);
+      transform: scale(0.95);
     `}
 `;
 const StyledP = styled.p`
   font-size: 16px;
+  font-weight: 400;
 `;
 
 const Card = ({ title, description, link, showMore }) => (
