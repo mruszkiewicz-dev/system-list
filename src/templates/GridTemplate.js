@@ -54,14 +54,13 @@ const StyledGridWrapperMore = styled.div`
       margin: 15px;
       grid-gap: 20px;
       display: grid;
-      grid-template-columns: 0.25fr 0.25fr 0.25fr 0.25fr;
+      grid-template-columns: 0.33fr 0.33fr 0.33fr;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
       align-content: center;
       animation: myAnim2 0.8s ease 0s 1 normal forwards;
-
       @keyframes myAnim2 {
         0% {
           transform: scale(0.8);
@@ -80,7 +79,7 @@ const StyledWrapperH1 = styled.div`
   justify-content: center;
   position: relative;
   color: #333;
-  margin: 30px;
+  margin: 20px;
   font-size: 18px;
 `;
 

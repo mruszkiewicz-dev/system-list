@@ -1,6 +1,9 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
+import Typography from '@mui/material/Typography';
 import Button from '../Button/Button.js';
+
+
 
 const StyledWrapper = styled.div`
   text-align: center;
@@ -25,15 +28,11 @@ const StyledWrapper = styled.div`
       transform: scale(0.95);
     `}
 `;
-const StyledP = styled.p`
-  font-size: 16px;
-  font-weight: 400;
-`;
 
-const Card = ({ title, description, link, showMore }) => (
+const Card = ({ title, description, link, showMore }) =>(
   <StyledWrapper showMore={showMore}>
-    <h1>{title}</h1>
-    <StyledP>{description}</StyledP>
+    <Typography  mt={2} variant="h4" >{title}</Typography>
+    <Typography mt={1}  variant="h6" >{description}</Typography>
     <Button link={link} />
   </StyledWrapper>
 );

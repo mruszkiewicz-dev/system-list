@@ -59,4 +59,10 @@ export const systemItem = [
       description: 'Wewnętrzny system zamówień artykułów spożywczych i biurowych FRSE ',
       link: 'http://sklep.frse.org.pl/biurowe/',
     },
+    {
+      id: 11,
+      title: 'Baza foto',
+      description: 'Wydawnictwo FRSE',
+      link: 'https://media.frse.org.pl',
+    },
  ];
