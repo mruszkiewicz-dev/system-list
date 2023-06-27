@@ -10,7 +10,7 @@ const StyledButton = styled.a`
   color: #3b3b3b;
   cursor: pointer;
   display: inline-block;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   line-height: normal;
   position: absolute;

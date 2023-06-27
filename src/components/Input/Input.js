@@ -2,17 +2,17 @@ import styled from 'styled-components';
 import magnifier from '../../assets/icons/magnifier.svg';
 
 const Input = styled.input`
-  font-size: 12px;
+  font-size: 10px;
   background-color: white;
   border: wheat;
   border-radius: 50px;
-  padding: 10px 10px 10px 10px;
+  padding: 8px;
   background-image: url(${() => magnifier});
   background-size: 15px;
   background-position: 10px 50%;
   background-repeat: no-repeat;
   text-align: center;
-  width: 280px;
+  width: 20px;
 
   :focus {
     outline: none;

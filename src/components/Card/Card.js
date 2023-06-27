@@ -10,7 +10,7 @@ const StyledWrapper = styled.div`
   position: relative;
   background: #054371;
   width: 350px;
-  height: 180px;
+  height: 175px;
   border-radius: 6px;
   padding: 1rem;
   color: #dbe3e9;
@@ -31,8 +31,8 @@ const StyledWrapper = styled.div`
 
 const Card = ({ title, description, link, showMore }) =>(
   <StyledWrapper showMore={showMore}>
-    <Typography  mt={2} variant="h4" >{title}</Typography>
-    <Typography mt={1}  variant="h6" >{description}</Typography>
+    <Typography mt={2} variant="h4" >{title}</Typography>
+    <Typography mt={1} variant="h6" >{description}</Typography>
     <Button link={link} />
   </StyledWrapper>
 );

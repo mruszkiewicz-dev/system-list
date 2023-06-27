@@ -20,8 +20,8 @@ const StyledWrapper = styled.div`
 `;
 const StyledGridWrapper = styled.div`
   display: grid;
-  grid-template-columns: 0.5fr 0.5fr;
-  grid-gap: 50px;
+  grid-template-columns: 0.33fr 0.33fr 0.33fr;
+  grid-gap: 20px;
   margin: 30px;
   animation-name: appear;
   animation-duration: 1s;
@@ -52,7 +52,7 @@ const StyledGridWrapperMore = styled.div`
     showMore &&
     css`
       margin: 15px;
-      grid-gap: 20px;
+      grid-gap: 15px;
       display: grid;
       grid-template-columns: 0.33fr 0.33fr 0.33fr;
       flex-direction: row;
@@ -158,7 +158,7 @@ class GridTemplate extends React.Component {
         </StyledWrapperH1>
         <StyledGridWrapper showMore={showMore}>
           {system
-            .filter((item) => item.id <= 2)
+            .filter((item) => item.id <= 3)
             .map((itemFilter) => (
               <Card showMore={showMore} key={itemFilter.id} {...itemFilter} />
             ))}
@@ -167,7 +167,7 @@ class GridTemplate extends React.Component {
           {showMore === true && (
             <>
               {system
-                .filter((item) => item.id > 2)
+                .filter((item) => item.id > 3)
                 .map((itemFilter) => (
                   <Card showMore={showMore} key={itemFilter.id} {...itemFilter} />
                 ))}
